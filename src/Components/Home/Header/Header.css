@@ -1,0 +1,16 @@
+.header-container {
+    height:976px;
+    position:relative;
+    background-image: url(../../../images//Charibg.png);
+    background-size: cover;
+}
+.header-container::after{
+    height:976px;
+    content:' ';
+    position: absolute;
+    top: 0;
+    width: 400px;
+    right: 0;
+    background-color: #3A4256;
+    z-index: -50;
+}
