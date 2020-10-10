@@ -4,7 +4,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faFacebookF, faInstagram, faGooglePlusG} from '@fortawesome/free-brands-svg-icons';
 const Footer = () => {
     return (
-        <div className="container mt-5">
+        <div className=" mt-5">
             <div className="row">
                 <div className="col-md-3 pt-5 ">
                     <ul>
@@ -96,7 +96,7 @@ const Footer = () => {
             </div>
             <div className="copyRight text-center mt-5">
                 <p>Copyright {(new Date()).getFullYear()}
-                    All Rights Reserved</p>
+                     All Rights Reserved</p>
             </div>
         </div>
     );

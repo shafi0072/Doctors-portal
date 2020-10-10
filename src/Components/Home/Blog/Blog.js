@@ -6,6 +6,7 @@ import BlogDetails from '../BlogDetails/BlogDetails';
 const Blog = () => {
     const blogData = [
         {
+            id:1,
             name: 'Wilson',
             title: '2 times brush can keep you healthy',
             des: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam delectus, es' +
@@ -14,6 +15,7 @@ const Blog = () => {
             img: wilson
 
         }, {
+            id:2,
             name: 'Ema Gomez',
             title: '2 times brush can keep you healthy',
             des: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam delectus, es' +
@@ -22,6 +24,8 @@ const Blog = () => {
             img: ema
 
         }, {
+
+            id:3,
             name: 'Aliza',
             title: '2 times brush can keep you healthy',
             des: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam delectus, es' +
@@ -41,7 +45,7 @@ const Blog = () => {
                     </div>
                 </div>
                 <div className="card-deck mt-5">
-                    {blogData.map(data => <BlogDetails data={data}/>)}
+                    {blogData.map(data => <BlogDetails key={data.id} data={data}/>)}
                 </div>
             </div>
         </section>

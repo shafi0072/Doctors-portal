@@ -13,7 +13,7 @@ const Contract = () => {
                         <input type="text" className="form-control" placeholder="Subject*"/>
                         <br/>
                         <textarea
-                            class="form-control"
+                            className="form-control"
                             id="exampleFormControlTextarea1"
                             rows="3"
                             placeholder="Message"></textarea>

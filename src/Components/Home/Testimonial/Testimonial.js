@@ -7,18 +7,21 @@ import TestimonialsDetails from '../TestimonialDetails/TestimonialsDetails';
 const Testimonial = () => {
     const testimonialsDetails =[
         {
+            id:1,
             quote: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores alias deleniti placeat sint voluptate voluptas veritatis fugiat dolores odit? Cum dignissimos enim quod. ' ,
             name:'Wilson Harry',
             from:'California',
             img:wilson
         },
         {
+            id:2,
             quote:'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores alias deleniti placeat sint voluptate voluptas veritatis fugiat dolores odit? Cum dignissimos enim quod. ',
             name:'Ema Gomez',
             from:'California',
             img: ema
         },
         {
+            id:3,
             quote:'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores alias deleniti placeat sint voluptate voluptas veritatis fugiat dolores odit? Cum dignissimos enim quod. ',
             name:'Aliza',
             from:'California',
@@ -34,7 +37,7 @@ const Testimonial = () => {
                 </div>
                 <div className="card-deck mt-5">
                     {
-                        testimonialsDetails.map(data => <TestimonialsDetails data={data} />)
+                        testimonialsDetails.map(data => <TestimonialsDetails key={data.id} data={data} />)
                     }
                 </div>
             </div>

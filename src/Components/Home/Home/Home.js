@@ -3,7 +3,7 @@ import Blog from '../Blog/Blog';
 import Contract from '../Contract/Contract';
 import Doctores from '../Doctores/Doctores';
 import FeaturedService from '../FeaturedService/FeaturedService';
-import Footer from '../Footer/Footer';
+import Footer from '../../Shared/Footer/Footer';
 import Header from '../Header/Header';
 import MakeAppointment from '../MakeAppointment/MakeAppointment';
 import Services from '../Services/Services';
