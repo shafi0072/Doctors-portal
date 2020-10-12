@@ -16,10 +16,34 @@ const customStyles = {
 Modal.setAppElement('#root')
 
 const AppointForm = ({modalIsOpen, closeModal, appointmentOn, selectedDate}) => {
+    function getFormattedDate(d) {
+        let today = new Date(d);
+        const dd = String(today.getDate()).padStart(2, '0');
+        const mm = String(today.getMonth() + 1).padStart(2, '0');
+        const yyyy = today.getFullYear();
+        today = `${dd}-${mm}-${yyyy}`;
+        return today;
+    }
     const {register, handleSubmit, errors} = useForm();
     const onSubmit = data => {
-        console.log(data);
-        closeModal()
+        data.service = appointmentOn;
+        data.date = getFormattedDate(selectedDate);
+        data.created = new Date();
+        console.log(data)
+        fetch('http://localhost:5000/addAppointment',{
+            method:'POST',
+            headers:{'content-type':'application/json'},
+            body:JSON.stringify(data)
+
+        })
+        .then(res => res.json())
+        .then(success => {
+            if(success){
+                closeModal();
+                alert('Thanks Man')
+            }
+        })
+        
     };
 
     return (

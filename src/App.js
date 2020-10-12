@@ -7,6 +7,7 @@ import {
 
 import './App.css';
 import Appointment from './Components/Appointment/Appointment/Appointment';
+import DashboardMain from './Components/Dashboard/DashboardMain/DashboardMain';
 import Home from './Components/Home/Home/Home';
 import Login from './Components/LogIn/Login';
 export const UserContext = createContext();
@@ -25,6 +26,9 @@ function App() {
         </Route>
         <Route path='/login'>
           <Login/>
+        </Route>
+        <Route path='/dashboard'>
+          <DashboardMain/>
         </Route>
       </Switch>
     </Router>
